@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grandma & Me Cookies</title>
+<style>
+:root{
+  --pink:#ffdce8; --hot:#e96b98; --cream:#fffaf1; --yellow:#ffe9a8;
+  --brown:#65483e; --mint:#e9f7ef; --lav:#f2e8fb;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:"Trebuchet MS",Arial,sans-serif;color:var(--brown);background:#fff}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:10;background:#fff5f8dd;backdrop-filter:blur(10px);border-bottom:2px solid #f8d5e1}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.logo{font-weight:900;font-size:1.25rem;line-height:1.05}.logo span{font-size:1.7rem}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;font-weight:700}
+.links a{padding:8px 11px;border-radius:20px}.links a:hover{background:var(--pink)}
+.hero{background:linear-gradient(135deg,#fff7e9,#ffeaf2);padding:70px 22px 65px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"🐾";position:absolute;font-size:60px;opacity:.16;transform:rotate(-15deg)}
+.hero:before{left:4%;top:20%}.hero:after{right:5%;bottom:15%}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.badge{display:inline-block;background:#fff;border:2px solid #f6cfdd;border-radius:30px;padding:8px 14px;font-weight:800;color:var(--hot)}
+h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.9;margin:18px 0;color:#5e4037}
+.hero p{font-size:1.2rem;max-width:560px}
+.btn{display:inline-block;background:var(--hot);color:white;padding:13px 21px;border-radius:28px;font-weight:900;box-shadow:0 6px 0 #c94f7b;margin-top:10px}
+.btn:hover{transform:translateY(-2px)}
+.hero-art{min-height:310px;border-radius:45% 55% 45% 55%;background:#fff0d0;display:flex;align-items:center;justify-content:center;font-size:8rem;box-shadow:inset 0 0 0 10px #fff6e6}
+section{padding:65px 22px}.wrap{max-width:1100px;margin:auto}
+.section-title{text-align:center;font-size:2.3rem;margin:0 0 8px}.subtitle{text-align:center;margin:0 0 32px}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:var(--cream);border:2px solid #f6e5d0;border-radius:30px;padding:25px;display:grid;grid-template-columns:170px 1fr;gap:22px;align-items:center}
+.cookie-art{height:170px;border-radius:25px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:6rem}
+.card h3{font-size:1.55rem;margin:0 0 8px}.price{font-weight:900;font-size:1.25rem;color:var(--hot)}
+.about{background:var(--pink)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.story{background:#fff8fb;padding:30px;border-radius:30px}
+.gallery{background:var(--mint)}
+.photos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.photo{height:180px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#fff4dc;border:3px solid #fff}
+.photo:nth-child(2){background:#ffe1eb}.photo:nth-child(3){background:#fff0b8}.photo:nth-child(4){background:#eadcf7}
+.order{background:linear-gradient(135deg,#fff6dc,#f8eafb)}
+.formbox{max-width:760px;margin:auto;background:#fff;border-radius:30px;padding:30px;box-shadow:0 10px 35px #8d5a6a20}
+form{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{font-weight:800;font-size:.9rem}input,select,textarea{width:100%;margin-top:7px;padding:13px;border:2px solid #f0dbe3;border-radius:14px;font:inherit;color:var(--brown);background:#fffdfd}textarea{min-height:100px;resize:vertical}.full{grid-column:1/-1}.notice{background:#fff0f5;padding:14px;border-radius:15px;font-size:.9rem;margin:15px 0}
+footer{text-align:center;padding:35px 22px;background:#f8eafb}.paw{font-size:1.6rem}
+@media(max-width:750px){
+ .hero-inner,.about-grid{grid-template-columns:1fr}.hero{text-align:center}.hero p{margin:15px auto}
+ .links{gap:5px}.links a{padding:6px;font-size:.78rem}.logo{font-size:1rem}
+ .products{grid-template-columns:1fr}.card{grid-template-columns:1fr;text-align:center}.cookie-art{height:140px}
+ .photos{grid-template-columns:1fr 1fr}.photo{height:130px}
+ form{grid-template-columns:1fr}.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+  <a class="logo" href="#home"><span>🍪</span> Grandma & Me<br>Cookies</a>
+  <div class="links">
+    <a href="#home">🏠 Home</a><a href="#menu">🍪 Menu</a><a href="#about">👵 About</a>
+    <a href="#gallery">📸 Gallery</a><a href="#order">📝 Order</a>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div>
+   <span class="badge">♡ Small batches • Big love ♡</span>
+   <h1>Grandma & Me Cookies</h1>
+   <p><strong>Baked with love, one small batch at a time.</strong><br>Homemade treats made together across two generations.</p>
+   <a class="btn" href="#menu">See our biscuits →</a>
+  </div>
+  <div class="hero-art" aria-label="Cute cat and cookie illustration">🐱🍪👵🏻</div>
+ </div>
+</section>
+
+<section id="menu">
+ <div class="wrap">
+  <h2 class="section-title">Our Biscuits 🐾</h2>
+  <p class="subtitle">Just two favourites — simple, buttery and made with care.</p>
+  <div class="products">
+   <article class="card">
+    <div class="cookie-art">🐱🍪</div>
+    <div><h3>Cat’s Tongue Biscuits</h3><p>Crispy, delicate and buttery biscuits inspired by the classic cat’s tongue shape.</p><div class="price">$2.00 per pack</div><small>Box of 8–10 pieces</small></div>
+   </article>
+   <article class="card">
+    <div class="cookie-art">🌼🍪</div>
+    <div><h3>Butter Cookies</h3><p>Classic, rich and comforting butter cookies with a soft, homemade feel.</p><div class="price">$1.80 per pack</div><small>Box of 6–10 pieces</small></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="wrap about-grid">
+  <div class="story"><h2 class="section-title" style="text-align:left">About Us 💕</h2>
+   <h3>Two generations, one kitchen, lots of biscuits.</h3>
+   <p>Grandma and her 13-year-old grandchild work together on small batches of homemade treats for a limited number of customers.</p>
+   <p>We keep things small so every batch gets plenty of care and attention.</p>
+  </div>
+  <div style="font-size:5rem;text-align:center">👧🏻 👵🏻<br>🍪 🐱 🍪</div>
+ </div>
+</section>
+
+<section class="gallery" id="gallery">
+ <div class="wrap">
+  <h2 class="section-title">Little Gallery 📸</h2>
+  <p class="subtitle">A peek into our happy little baking world.</p>
+  <div class="photos">
+   <div class="photo">🐱🍪</div><div class="photo">🌼🍪</div><div class="photo">👩🏻‍🍳🍪</div><div class="photo">🎀🍪</div>
+  </div>
+ </div>
+</section>
+
+<section class="order" id="order">
+ <div class="wrap">
+  <h2 class="section-title">Order / Request a Batch 📝</h2>
+  <p class="subtitle">Send a request and we’ll confirm availability.</p>
+  <div class="formbox">
+   <form id="orderForm" action="https://formsubmit.co/ajax/sonia_liew_en_ci@students.edu.sg" method="POST">
+    <div><label>First name<input name="name" required placeholder="Your first name"></label></div>
+    <div><label>Biscuit<select name="biscuit" required><option value="">Choose one</option><option>Cat’s Tongue Biscuits</option><option>Butter Cookies</option></select></label></div>
+    <div><label>Number of packs<input name="quantity" type="number" min="1" max="10" required placeholder="e.g. 2"></label></div>
+    <div><label>Preferred day<input name="day" type="date"></label></div>
+    <div class="full"><label>Message<textarea name="message" placeholder="Anything you’d like us to know?"></textarea></label></div>
+    <div class="full notice">💗 For safety, orders, payments, delivery/pickup and customer contact should be handled or confirmed by a trusted adult.</div>
+    <div class="full" style="text-align:center"><button class="btn" type="submit" style="border:0;cursor:pointer;font-size:1rem">Send Request →</button></div>
+   </form>
+   <p id="thanks" style="display:none;text-align:center;font-weight:900;color:var(--hot);font-size:1.1rem">🍪 Request received! An adult can review it and contact you about availability.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="paw">🐾 💕 🐾</div><strong>Grandma & Me Cookies</strong><br><small>Small Batch • Big Love • Made with care</small></footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const form = this;
+  const button = form.querySelector("button[type='submit']");
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  data._subject = "New Grandma & Me Cookies order request";
+  data._template = "table";
+  data._captcha = "true";
+
+  button.disabled = true;
+  button.textContent = "Sending…";
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    if (!response.ok || result.success === false) throw new Error("Submission failed");
+
+    form.style.display = "none";
+    const thanks = document.getElementById("thanks");
+    thanks.style.display = "block";
+    thanks.innerHTML = "🍪 Order request sent to the business email!";
+  } catch (error) {
+    button.disabled = false;
+    button.textContent = "Send Request →";
+    alert("The order could not be sent. Please make sure the website is hosted online and the receiving email has completed FormSubmit activation.");
+  }
+});
+</script>
+</body>
+</html>
